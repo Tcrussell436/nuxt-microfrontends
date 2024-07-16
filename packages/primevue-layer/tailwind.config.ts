@@ -1,10 +1,17 @@
 // https://tailwindcss.com/docs/configuration
 import * as path from "node:path";
+import {dirname, join} from "path";
+import {fileURLToPath} from "url";
+const currentDir = dirname(fileURLToPath(import.meta.url));
 
 export default {
   plugins: [],
+  // These files are scanned for tailwind CSS classes. Files from this layer need to import.meta.url to properly resolve file location
   content: [
-    path.join(path.dirname(require.resolve('@tcrussell436/primevue-presets/aura')), '/**/*.js')
+    join(path.dirname(require.resolve('@tcrussell436/primevue-presets/aura')), '/**/*.js'),
+    join(currentDir, './components/**/*.{js,ts,vue}'),
+    join(currentDir, './pages/**/*.{js,ts,vue}'),
+    join(currentDir, './app.vue'),
   ],
   darkMode: 'class',
   // extend the tailwind colors to our RGB values from ~/assets/css/base.scss

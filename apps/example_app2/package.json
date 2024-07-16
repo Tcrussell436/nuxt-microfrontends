@@ -1,5 +1,5 @@
 {
-  "name": "@tcrussell436/example_app1",
+  "name": "nuxt-app",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,8 +11,6 @@
   },
   "dependencies": {
     "nuxt": "^3.12.3",
-    "vue": "latest",
-    "@tcrussell436/primevue-layer": "workspace:*",
-    "@tcrussell436/example-api-layer": "workspace:*"
+    "vue": "latest"
   }
 }

@@ -1,5 +1,12 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
   <div>
-    <NuxtPage />
+    <NavTopBar />
+    <main class="max-w-7xl mx-auto py-2">
+      <NuxtPage />
+    </main>
   </div>
 </template>
